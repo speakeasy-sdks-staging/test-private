@@ -1,16 +1,32 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 21c25ca8a734b4fb704e98d966524ee0
+  docVersion: 1.0.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
+  comments: {}
   sdkClassName: private-test
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks-staging/test-private.git
+features:
+  go:
+    core: 3.1.0
+    flattening: 2.81.1
+    globalServerURLs: 2.82.0
 go:
-  version: 0.0.1
+  version: 0.1.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/sdkerrors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  installationURL: https://github.com/speakeasy-sdks-staging/test-private
   maxMethodParams: 4
   packageName: github.com/speakeasy-sdks-staging/test-private
+  published: true
+  repoSubDirectory: .
